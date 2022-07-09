@@ -1,22 +1,28 @@
+import math
+
 def main():
     i = 1
-    sop = 2
+    sop = 5
 
-    while i <= 100:
-        j = 2
-        #--------------------
-        while j < i:
+    while i < 2000000:
+        j = 5
+        # --------------------
+        while i> j:
             
-            if(i%j == 0):
+            if(i % j == 0 ):
+                print(i,j)
+                print("break")
                 break
-            elif(j == i - 1 ):
+            elif(j > math.ceil(math.sqrt(i))):
                 sop += i
+                print(i)
+                break
             j += 1
-        #------------------------
-                
-        i += 1
+        # ------------------------
+
+        i += 2
+
+    print("final: ",sop)
 
 
-
-    print(sop)
 main()
